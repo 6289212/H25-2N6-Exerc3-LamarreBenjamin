@@ -35,19 +35,27 @@ print(os.listdir())
 # Q6   Créez les répertoires OS-ExercQ6/Subdir1 avec une seule instruction
 #       Réimprimez les répertoires et les fichiers dans votre 'Document'
 print(f"Q6{'_'*60}")
+if "OS-ExercQ6" in os.listdir() :
+    pass
+else :
+    os.mkdir("OS-ExercQ6")
+    os.chdir("OS-ExercQ6")
+    os.mkdir("Subdir1")
+print(os.listdir())
 
-print(os.listdir("C:\\Users\\6289212\\Documents\\OS-ExercQ5"))
 
 
 #Q7   Renommez le répertoire Subdir1 pour qu'il s'appelle Sous_repertoire
-print(f"Q6{'_'*60}")
-
+print(f"Q7{'_'*60}")
+os.chdir("C:\\Users\\6289212\\Documents\\OS-ExercQ6")
+os.rename("Subdir1", "Sous-repertoire")
 
 
 # Q8   suppression du répertoire OS-ExercQ6 et de son contenu
 #       Réimprimez les répertoires et les fichiers dans votre 'Document'
-print(f"Q6{'_'*60}")
-
+print(f"Q8{'_'*60}")
+os.chdir("C:\\Users\\6289212\\Documents")
+os.remove("OS-ExercQ5")
 
 
 
